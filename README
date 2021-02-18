@@ -1,0 +1,12 @@
+SQL:
+      CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombres` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `apellidos` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `cedula` int(11) NOT NULL,
+  `correo` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `telefono` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `usuario_uk_cedula` (`cedula`),
+  UNIQUE KEY `usuario_uk_correo` (`correo`)
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=latin1
